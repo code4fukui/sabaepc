@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>鯖江市地域活性化プランコンテスト検索</title>
+<head>
+<script type="module">
+import { CSV } from "https://js.sabae.cc/CSV.js";
+
+onload = async () => {
+	const url1 = "./sabaeplan.csv";
+	const data1 = CSV.toJSON(await CSV.fetch(url1));
+	const url2 = "./sabaeplan2021.csv";
+	const data2 = CSV.toJSON(await CSV.fetch(url2));
+	const data = [...data1, ...data2];
+	const nsort = (a) => parseInt(a.year + (10 - parseInt(a.num)));
+	data.sort((a, b) => -nsort(a) + nsort(b));
+	
+	content.appendChild(getContent(data));
+	const srch = () => {
+		const key = srchbox.value;
+		const cs = cc.childNodes;
+		for (let i = 0; i < cs.length; i++) {
+			const s = cs[i].innerHTML
+			cs[i].style.display = s.indexOf(key) >= 0 ? "block" : "none";
+		}
+	};
+	srchbox.onchange = srchbox.onkeyup = srch;
+};
+const create = (tag) => document.createElement(tag);
+const getContent = (data) => {
+	const div = create("div");
+	div.id = "cc";
+	for (const dd of data) {
+		const div2 = create("div");
+		div2.className = "rdfc";
+		div.appendChild(div2);
+		for (const name in dd) {
+			if (name == "sabaeplan" || name == "nteam" || name == "num") {
+				continue;
+			}
+			if (dd[name].length == 0) {
+				continue;
+			}
+			const td = create("td");
+			const div3 = create("div");
+			div3.className = name;
+			div3.innerHTML = dd[name].replace(/\n/g, "<br>");
+			div2.appendChild(div3);
+		}
+	}
+	return div
+};
+</script>
+<style>
+body {
+	text-align: center;
+	margin: 0px;
+	background: #fee;
+}
+#content {
+	text-align: left;
+	font-size: 90%;
+	padding: 0 .5em;
+}
+#content div {
+	word-break: break-all;
+}
+.rdfc {
+	background: white;
+	opacity: 0.8;
+	margin: 8px;
+	padding: 8px;
+}
+.label {
+	display: none;
+}
+.num:before {
+	content: "第";
+}
+.num {
+	display: inline;
+	margin-right: .5em;
+}
+.num:after {
+	content: "回";
+}
+.year {
+	display: inline;
+}
+.year:after {
+	content: "年";
+	margin-right: .5em;
+}
+.team:before {
+	content: "チーム「";
+}
+.team:after {
+	content: "」";
+}
+.team {
+	display: inline;
+}
+.title {
+	display: block;
+	font-size: 30px;
+	color: #611;
+}
+.proposal {
+	margin: 8px;
+}
+.summary:before {
+	content: "概要：";
+}
+.summary {
+	margin: 10px;
+	border: 1px solid #666;
+	padding: 0.5em;
+	font-size: 90%;
+}
+.expectation:before {
+	content: "期待：";
+}
+.expectation {
+	margin: 10px;
+	border: 1px solid #666;
+	padding: 0.5em;
+	font-size: 90%;
+}
+.result1:before {
+	content: "➔";
+	margin-right: 6px;
+}
+.result1 {
+	font-weight: bold;
+	margin: 6px 0px;
+}
+/* 2021 */
+.strengths:before {
+	content: "強み：";
+}
+.target:before {
+	content: "ターゲット：";
+}
+.problems:before {
+	content: "課題：";
+}
+.fukuno_comment:before {
+	content: "福野コメント：";
+}
+.target, .strengths, .problems, .fukuno_comment {
+	margin: 10px;
+	border: 1px solid #666;
+	padding: 0.5em;
+	font-size: 90%;
+}
+.prize:before {
+	content: "➔";
+	margin-right: 6px;
+}
+.prize {
+	font-weight: bold;
+	margin: 6px 0px;
+}
+
+/* credit */
+.credit {
+	margin: 20px;
+	text-align: left;
+}
+.credit a {
+	color: gray !important;
+}
+h1 a {
+	color: #000 !important;
+	text-decoration: none;
+}
+#srchbox {
+	display: inline-block;
+	margin: 8px 10px;
+	padding: 8px;
+	font-size: 120%;
+	width: 90%;
+	text-align: left;
+}
+#srchboxc {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>鯖江プラコン検索</h1>
+<div id="srchboxc"><input type="text" id="srchbox" placeholder="検索キーワード"></div>
+<div id="content">
+</div>
+<br>
+「<a href="https://sabae-plancontest.jp/"">鯖江市地域活性化プランコンテスト｜市長をやりませんか？</a>」で誕生したプラン、オープンデータを元に検索できるツールをつくってみました。<br>
+<br>
+DATA: CC BY <a href=./sabaeplan.csv>鯖江市地域活性化プランコンテスト一覧CSVオープンデータ</a><br>
+DATA: CC BY <a href=./sabaeplan2021.csv>第14回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
+APP: CC BY <a href=https://fukuno.jig.jp/658>福野泰介の一日一創</a>
+</div>
+
+</body>
+</html>
