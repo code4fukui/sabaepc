@@ -18,7 +18,7 @@ const data = CSV.toJSON(await CSV.fetch("./sabaeplan2021.csv"));
 // sabaeplan,year,num,team,title,target,summary,strengths,problems,fukuno_comment,prize
 const res = [];
 for (const d of data) {
-  const s = `「${d.title} by チーム ${d.team}」${d.prize}<br>
+  const s = `<h3>「${d.title} by チーム ${d.team}」${d.prize}</h3>
 ターゲット: ${d.target}<br>
 課題: ${d.problems}<br>
 強み: ${d.strengths}<br>
