@@ -1,8 +1,8 @@
-sabaeplan,year,num,team,title,withlink,problems,target,summary,summary_comment,background,background_memo,schedule,schedule_comment,fukuno_comment,prize,img1,img2
+sabaeplan,year,num,team,title,withlink,problems,target,summary,summary_comment,background,background_memo,schedule,schedule_comment,fukuno_comment,prize,img1,img2,img_grarec
 202301,2023,1,イカロス,みんなで作ろう！マイクラで作る鯖江の未来,https://twitter.com/sabaepc_with/status/1703634646079361304,活気がない,鯖江の小中学生,マイクラで現在、過去、未来を再現,"越前市でやってるので、追加要素がほしい
 商店街の3Dオープンデータがあるので活用できるかも
 オープンデータ化して、VRアプリ化するのもいいかも？",IchigoJamでIT教育している,GIGAスクールで小学生はiPad、中学生はChromebookを持っている,夏休みに1度、1週間,"どう継続させるか？
-学校のカリキュラム内でやってもいいかも？",IT x 楽しい x 世代間コミュニケーションがいいね！教育とマイクラは実施例も多いので、差別化したい,優秀賞,img/sabaepc2023/IMG_1001.jpg,img/sabaepc2023/IMG_1005.jpg
+学校のカリキュラム内でやってもいいかも？",IT x 楽しい x 世代間コミュニケーションがいいね！教育とマイクラは実施例も多いので、差別化したい,優秀賞,img/sabaepc2023/IMG_1001.jpg,img/sabaepc2023/IMG_1005.jpg,img/sabaepc2023/team1.jpg
 202302,2023,2,ネプチューン,からだで浴びろ！鯖江発信プロジェクト,https://twitter.com/sabaepc_with/status/1703638228648288331,新幹線が止まらない鯖江,金沢から大阪へ新幹線で出張する会社員,"五感に訴えるPR
 沿線さばえハーモニー（2300人並んで、線路に向けて吹く！）
 田んぼアート、雪で作ったオブジェ
@@ -13,7 +13,7 @@ sabaeplan,year,num,team,title,withlink,problems,target,summary,summary_comment,b
 見えるポイントが知りたい","おもしろいPRしたいよね！
 新たに増える首都圏からの人流、PRするなら敦賀駅より、福井駅？
 どこからくる人にPRするかが大事
-福井県観光アンケートオープンデータを活用したい",,img/sabaepc2023/IMG_1010.jpg,
+福井県観光アンケートオープンデータを活用したい",,img/sabaepc2023/IMG_1010.jpg,,img/sabaepc2023/team2.jpg
 202303,2023,3,サターン,市長、異議申して立てパイ！,https://twitter.com/sabaepc_with/status/1703643534153408722,鯖江に地元愛がない,,"その地域の若者だけの共通体験、日本一の成人式(20歳の集い)を行い記憶に残るまちにする
 市長に提言しながらパイをぶつける！",,"特別な成人式が目立っている
 ディズニー、鴨川シーワールド、動物ト写真、カチャーシーを踊る成人式
@@ -22,7 +22,7 @@ sabaeplan,year,num,team,title,withlink,problems,target,summary,summary_comment,b
 若者に関するKPIを設定するために、オープンデータ公開してほしい","20歳の集い
 実行委員会の立ち上げからスタート",投票率を上げる,"印象に残るの大事！
 パイ投げに限らず、毎年新しく考えていくきっかけにできそう
-大切な着物が汚れない特殊なパイ素材を考えてみるのも良さそう",優秀賞,img/sabaepc2023/IMG_1015.jpg,
+大切な着物が汚れない特殊なパイ素材を考えてみるのも良さそう",優秀賞,img/sabaepc2023/IMG_1015.jpg,,img/sabaepc2023/team3.jpg
 202304,2023,4,シリウス,日本1ムスリムフレンドリーな街・鯖江へ,https://twitter.com/sabaepc_with/status/1703650112554299753,,,"金曜日のお昼、週替りシェフによる、古民家じゅまたんカフェからスタートする、ムスリムの人にうれしいまちにする
 お祈りができる場所も用意する","ムスリム＝イスラム教
 ハラルはイスラム教に沿ったもの（豚肉だめ、お酒だめ）
@@ -30,7 +30,7 @@ sabaeplan,year,num,team,title,withlink,problems,target,summary,summary_comment,b
 ハラル認証をとるのは大変、鯖江で新しい認証をつくるのもあり？","今、世界に4人に1人がムスリム、いずれ、3人に1人に
 ヒジャブを製造している会社、染色メーカーあり（坂井市、あらわ市） https://www.up-ut.com/business/",,週一金曜日（＝アラビア語でじゅまたん）のカフェタイム、ムスリムはお酒NGなのでカフェ,週一からじわじわスタートするのは良さそう,"ハラル認証はハードルが高いので、礼拝スペースオープンデータ＆アプリからスタートいいかも
 latempoの金曜カフェでやってみるのもいいかも（2Fをお祈りスペースとして貸出もいけそう）、鯖江駅2Fカフェtetoteもあり
-サンドーム福井はモスクっぽい？",最優秀賞,img/sabaepc2023/IMG_1021.jpg,
+サンドーム福井はモスクっぽい？",最優秀賞,img/sabaepc2023/IMG_1021.jpg,,img/sabaepc2023/team4.jpg
 202305,2023,5,ウィーナス2,日本で一番トレジャーハンターが集まる町,https://twitter.com/sabaepc_with/status/1703654630222352516,,都会に飽きて日本らしいところを探す外国人、ジオキャッシングプレイヤー（200万人）,鯖江中にジオキャッシュを大量敷設する,ごみにはならないように、置いた人が設置し管理するルール,ジオキャッシングのまち、日本にない,,今すぐ,"やってみたい！
 ジオキャッシュングアプリいれたけど、公式承認前かな？？","市役所がジオキャッシュを置く、包括許諾をしてくれると良さそう
-公式ルールでは商業施設への誘導がNGなので、別途独自版を作るのもありかも https://www.geocaching.com/play/guidelines",,img/sabaepc2023/IMG_1029.jpg,img/sabaepc2023/IMG_1032.jpg
+公式ルールでは商業施設への誘導がNGなので、別途独自版を作るのもありかも https://www.geocaching.com/play/guidelines",,img/sabaepc2023/IMG_1029.jpg,img/sabaepc2023/IMG_1032.jpg,img/sabaepc2023/team5.jpg
