@@ -9,7 +9,12 @@
 import { CSV } from "https://js.sabae.cc/CSV.js";
 
 onload = async () => {
-	const urls = ["sabaeplan.csv", "sabaeplan2021.csv", "sabaeplan2023.csv"];
+	const urls = [
+		"sabaeplan.csv",
+		"sabaeplan2021.csv",
+		"sabaeplan2023.csv",
+		"sabaeplan2024.csv",
+	];
 	const data = [];
 	for (const url of urls) {
 		const data1 = CSV.toJSON(await CSV.fetch(url));
@@ -71,7 +76,7 @@ body {
 #content {
 	text-align: left;
 	font-size: 90%;
-	padding: 0 3em;
+	padding: 0 1em;
 	color: black;
 }
 #content div {
@@ -254,7 +259,9 @@ footer a {
 DATA: CC BY <a href=./sabaeplan.csv>鯖江市地域活性化プランコンテスト一覧CSVオープンデータ</a><br>
 DATA: CC BY <a href=./sabaeplan2021.csv>第14回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
 DATA: CC BY <a href=./sabaeplan2023.csv>第16回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
+DATA: CC BY <a href=./sabaeplan2024.csv>第17回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
 APP: CC BY <a href=https://fukuno.jig.jp/3344>福野泰介の一日一創</a> (<a href=https://fukuno.jig.jp/658>ver1</a>)<br>
+グラレコ: CC BY せいちゃん<br>
 <a href=https://github.com/code4fukui/sabaepc/>src on GitHub</a><br>
 </footer>
 </div>
