@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image"  content="https://code4fukui.github.io/sabaepc/sabaepcsrch.png">
 <meta name="twitter:image" content="https://code4fukui.github.io/sabaepc/sabaepcsrch.png">
@@ -7,6 +7,7 @@
 <head>
 <script type="module">
 import { CSV } from "https://js.sabae.cc/CSV.js";
+import { addEmbedYouTube } from "./addEmbedYouTube.js";
 
 onload = async () => {
 	const urls = [
@@ -14,6 +15,7 @@ onload = async () => {
 		"sabaeplan2021.csv",
 		"sabaeplan2023.csv",
 		"sabaeplan2024.csv",
+		"sabaeplan2025.csv",
 	];
 	const data = [];
 	for (const url of urls) {
@@ -53,7 +55,9 @@ const getContent = (data) => {
 			const td = create("td");
 			const div3 = create("div");
 			div3.className = name;
-			if (v.endsWith(".jpg")) {
+			if (name == "video_id") {
+				div3.innerHTML = addEmbedYouTube(dd.video_id, dd.video_t);
+			} else if (v.endsWith(".jpg")) {
 				div3.innerHTML = `<img src=${v}>`;
 			} else if (v.startsWith("https://")) {
 				div3.innerHTML = `<a href="${v}"">${v}</a>`;
@@ -69,9 +73,10 @@ const getContent = (data) => {
 <style>
 body {
 	text-align: center;
-	margin: 0px 0 3em 0;
+	margin: 0px auto 3em auto;
 	background: #d90040;
 	color: white;
+	max-width: 700px;
 }
 #content {
 	text-align: left;
@@ -218,6 +223,12 @@ body {
 	margin: 0 0;
 }
 
+/* youtube */
+.embedyoutube {
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
 /* credit */
 .credit {
 	margin: 20px;
@@ -260,6 +271,7 @@ DATA: CC BY <a href=./sabaeplan.csv>鯖江市地域活性化プランコンテ�
 DATA: CC BY <a href=./sabaeplan2021.csv>第14回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
 DATA: CC BY <a href=./sabaeplan2023.csv>第16回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
 DATA: CC BY <a href=./sabaeplan2024.csv>第17回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
+DATA: CC BY <a href=./sabaeplan2025.csv>第18回鯖江市地域活性化プランコンテストCSVオープンデータ（by 福野）</a><br>
 APP: CC BY <a href=https://fukuno.jig.jp/3344>福野泰介の一日一創</a> (<a href=https://fukuno.jig.jp/658>ver1</a>)<br>
 グラレコ: CC BY せいちゃん<br>
 <a href=https://github.com/code4fukui/sabaepc/>src on GitHub</a><br>
