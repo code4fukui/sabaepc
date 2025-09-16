@@ -11,4 +11,4 @@
 
 ## 出展
 
-- 2023年/2024年発表会のグラレコは、せいちゃん作成のオープンデータ ([CC-BY](https://creativecommons.org/licenses/by/4.0/))
+- グラレコは、せいちゃん作成のオープンデータ ([CC-BY](https://creativecommons.org/licenses/by/4.0/))
